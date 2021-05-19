@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PatientInfo"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarpHome"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#A1CAD5"
+
+        >
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/coronavirus"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="monospace"
+            android:text="COVID'19 HELPER"
+            android:textColor="#14678C"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Patient Information"
+                android:textSize="30dp"
+                android:textColor="#0C6891"
+                android:layout_gravity="center"
+
+                />
+
+
+            <EditText
+                android:id="@+id/Patient_Name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="#F8F6F6"
+                android:hint="Patient Name"
+                android:maxLength="50"
+                android:textColor="#5E5B5B"
+                android:textColorHint="#676363"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/Address"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="#F8F6F6"
+                android:hint="Adddress"
+                android:maxLength="50"
+                android:textColor="#5E5B5B"
+                android:textColorHint="#676363"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/City"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="#F8F6F6"
+                android:hint="City"
+                android:maxLength="50"
+                android:textColor="#5E5B5B"
+                android:textColorHint="#676363"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/Blood_Group"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="#F8F6F6"
+                android:hint="Blood Group"
+                android:maxLength="50"
+                android:textColor="#5E5B5B"
+                android:textColorHint="#676363"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                />
+            <EditText
+                android:id="@+id/Sugar_Level"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="#F8F6F6"
+                android:hint="Sugar Level"
+                android:maxLength="50"
+                android:textColor="#5E5B5B"
+                android:textColorHint="#676363"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                />
+            <EditText
+                android:id="@+id/Blood_Oxygen_Level"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="#F8F6F6"
+                android:hint="Blood Oxygen Level"
+                android:maxLength="50"
+                android:textColor="#5E5B5B"
+                android:textColorHint="#676363"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                />
+            <EditText
+                android:id="@+id/Blood_Pressure"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="#F8F6F6"
+                android:hint="Blood Pressure"
+                android:maxLength="50"
+                android:textColor="#5E5B5B"
+                android:textColorHint="#676363"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                />
+            <EditText
+                android:id="@+id/Mobile_Number"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="#F8F6F6"
+                android:hint="Mobile Number"
+                android:maxLength="50"
+                android:textColor="#5E5B5B"
+                android:textColorHint="#676363"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                />
+            <EditText
+                android:id="@+id/Consulting_Doctor"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="#F8F6F6"
+                android:hint="Consulting Doctor"
+                android:maxLength="50"
+                android:textColor="#5E5B5B"
+                android:textColorHint="#676363"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/Medication"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="#F8F6F6"
+                android:hint="Any Medication"
+                android:maxLength="50"
+                android:textColor="#5E5B5B"
+                android:textColorHint="#676363"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                />
+
+            <Button
+                android:id="@+id/Submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="#A1CAD5"
+                android:clickable="true"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="#0F1D23" />
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

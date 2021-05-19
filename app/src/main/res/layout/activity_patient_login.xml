@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    >
+
+    <ProgressBar
+        android:id="@+id/idProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:outlineSpotShadowColor="@color/blanco_60"
+
+        />
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#A1CAD5"
+
+        >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="monospace"
+        android:text="COVID'19 HELPER"
+        android:textAlignment="center"
+        android:textColor="#14678C"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/patient"
+            android:layout_marginTop="20dp">
+
+        </ImageView>
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#F8F6F6"
+            android:hint="Email address"
+            android:maxLength="50"
+            android:textColor="#5E5B5B"
+            android:textColorHint="#676363"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:background="#F8F6F6"
+            android:hint="@string/pass"
+            android:maxLength="8"
+            android:textColor="#5E5B5B"
+            android:textColorHint="#676363"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:password="true"/>
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:background="#A1CAD5"
+            android:clickable="true"
+            android:text="Log In"
+            android:textAllCaps="false"
+            android:textColor="#0F1D23" />
+
+        <Button
+            android:id="@+id/newaccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:background="#B80404"
+            android:clickable="true"
+            android:text="Create New Account"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"/>
+
+
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

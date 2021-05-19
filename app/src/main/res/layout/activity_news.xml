@@ -1,0 +1,3533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".News">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#A1CAD5"
+
+        >
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/applogo"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="monospace"
+            android:text="YUKTI"
+            android:textColor="#14678C"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="monospace"
+        android:text="COVID-19 Cases Overview "
+        android:textColor="#14678C"
+        android:textSize="25dp"
+        android:layout_below="@+id/toolbar"
+        android:textStyle="bold"
+        android:layout_centerInParent="true"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_navigation"
+        app:itemBackground="@color/colorPrimaryDark"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/menu_navigation"
+        android:layout_alignParentBottom="true"/>
+    <ScrollView
+
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textview">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textview"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/newsback"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/bihar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bihar"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:padding="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/active"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Active"
+                android:layout_below="@+id/bihar"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:paddingLeft="10dp"
+                android:layout_marginLeft="10dp"/>
+                <TextView
+                    android:id="@+id/activevalue"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content"
+                    android:text="113480"
+                    android:layout_below="@+id/active"
+                    android:textColor="#FD0000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"/>
+
+
+                <TextView
+                    android:id="@+id/deceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Deceased"
+                    android:layout_below="@+id/activevalue"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="20dp"/>
+                <TextView
+                    android:id="@+id/deceasedvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="2987"
+                    android:layout_below="@+id/deceased"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/recovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recovered"
+                    android:layout_toRightOf="@+id/active"
+                    android:textColor="#000000"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/bihar"
+                    android:gravity="right"
+                    android:textSize="15sp"
+                    android:paddingRight="80dp"/>
+                <TextView
+                    android:id="@+id/recoveredvalue"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"
+                    android:paddingRight="70dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="422210"
+                    android:layout_below="@+id/recovered"
+                    android:layout_toRightOf="@+id/activevalue"
+                    android:textColor="#267111"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/confirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Confirmed"
+                    android:layout_toRightOf="@+id/deceased"
+                    android:textColor="#000000"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/recoveredvalue"
+                    android:gravity="right"
+                    android:textSize="15sp"
+                    android:paddingRight="80dp"
+                    android:paddingTop="20dp"/>
+                <TextView
+                    android:id="@+id/confirmedvalue"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"
+                    android:paddingRight="70dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="538677"
+                    android:layout_below="@+id/confirmed"
+                    android:layout_toRightOf="@+id/deceasedvalue"
+                    android:textColor="#FD0000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"/>
+                <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/deceasedvalue"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/line"
+                    android:background="#7A7575"
+                   android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    />
+                <TextView
+                    android:id="@+id/india"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Across India"
+                    android:layout_below="@+id/line"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:layout_marginLeft="10dp"
+                    android:paddingTop="30dp"
+                    android:paddingLeft="10dp"/>
+
+                <TextView
+                    android:id="@+id/activeindia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Active"
+                    android:layout_below="@+id/india"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"/>
+                <TextView
+                    android:id="@+id/activevalueindia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3566398"
+                    android:layout_below="@+id/activeindia"
+                    android:textColor="#FD0000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"/>
+
+
+                <TextView
+                    android:id="@+id/deceasedindia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Deceased"
+                    android:layout_below="@+id/activevalueindia"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="15sp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="20dp"/>
+                <TextView
+                    android:id="@+id/deceasedvalueindia"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content"
+                    android:text="230168"
+                    android:layout_below="@+id/deceasedindia"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/recoveredindia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recovered"
+                    android:layout_toRightOf="@+id/activeindia"
+                    android:textColor="#000000"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/india"
+                    android:gravity="right"
+                    android:textSize="15sp"
+                    android:paddingRight="80dp"
+                    android:paddingTop="10dp"/>
+                <TextView
+                    android:id="@+id/recoveredvalueindia"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"
+                    android:paddingRight="50dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="17280844"
+                    android:layout_below="@+id/recoveredindia"
+                    android:layout_toRightOf="@+id/activevalueindia"
+                    android:textColor="#267111"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/confirmedindia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Confirmed"
+                    android:layout_toRightOf="@+id/deceasedindia"
+                    android:textColor="#000000"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/recoveredvalueindia"
+                    android:gravity="right"
+                    android:textSize="15sp"
+                    android:paddingRight="80dp"
+                    android:paddingTop="20dp"/>
+                <TextView
+                    android:id="@+id/confirmedvalueindia"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"
+                    android:paddingRight="50dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="21077410"
+                    android:layout_below="@+id/confirmedindia"
+                    android:layout_toRightOf="@+id/deceasedvalueindia"
+                    android:textColor="#FD0000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:layout_marginBottom="20dp"/>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardalldistrict"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#ffffff"
+                android:elevation="10dp"
+
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/biharcities"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="All District Stats"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"/>
+
+                    <TextView
+                        android:id="@+id/activeindex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Active"
+                        android:layout_below="@+id/biharcities"
+                        android:textColor="#FD0000"
+                        android:textStyle="bold"
+                        android:textSize="10sp"
+                        android:padding="10dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp"/>
+                    <TextView
+                        android:id="@+id/recoveredindex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Recovered"
+                        android:layout_below="@+id/biharcities"
+                        android:layout_toRightOf="@+id/activeindex"
+                        android:textColor="#267111"
+                        android:textStyle="bold"
+                        android:textSize="10sp"
+                        android:padding="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"/>
+                    <TextView
+                        android:id="@+id/deceasedindex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Deceased"
+                        android:layout_below="@+id/biharcities"
+                        android:layout_toRightOf="@+id/recoveredindex"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textSize="10sp"
+                        android:padding="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"/>
+                    <TextView
+                        android:id="@+id/confirmedindex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Confirmed"
+                        android:layout_below="@+id/biharcities"
+                        android:layout_toRightOf="@+id/deceasedindex"
+                        android:textColor="#FD0000"
+                        android:textStyle="bold"
+                        android:textSize="10sp"
+                        android:padding="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"/>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+            <TextView
+                    android:id="@+id/araria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Araria"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                   />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/arariaactive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/arariarecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/arariaactive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/arariadeceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/arariarecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                   />
+                <TextView
+                    android:id="@+id/arariaconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/arariadeceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                  />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+            <TextView
+                android:id="@+id/arwal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Arwal"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/arwalactive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/arwalrecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/arwalactive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/arwaldeceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/arwalrecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/arwalconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/arwaldeceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+            <TextView
+                android:id="@+id/aurangabad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aurangabad"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/aurangabadactive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/aurangabadrecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/aurangabadactive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/aurangabaddeceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/aurangabadrecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/aurangabadconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/aurangabaddeceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+            <TextView
+                android:id="@+id/banka"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Banka"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/bankaactive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/bankarecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/bankaactive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/bankadeceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/bankarecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/bankaconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/bankadeceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+            <TextView
+                android:id="@+id/begusarai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Begusarai"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/begusaraiactive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/begusarairecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/begusaraiactive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/begusaraideceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/begusarairecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/begusaraiconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/begusaraideceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+
+            <TextView
+                android:id="@+id/bhagalpur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Bhagalpur"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/bhagalpuractive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/bhagalpurrecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/bhagalpuractive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/bhagalpurdeceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/bhagalpurrecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/bhagalpurconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/bhagalpurdeceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+            <TextView
+                android:id="@+id/bhojpur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bhojpur"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/bhojpuractive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/bhojpurrecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/bhojpuractive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/bhojpurdeceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/bhojpurrecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/bhojpurconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/bhojpurdeceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+            <TextView
+                android:id="@+id/buxar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buxar"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/buxaractive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/buxarrecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/buxaractive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/buxardeceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/buxarrecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/buxarconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/buxardeceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+            <TextView
+                android:id="@+id/darbhanga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Darbhanga"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/darbhangaactive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/darbhangarecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/darbhangaactive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/darbhangadeceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/darbhangarecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/darbhangaconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/darbhangadeceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+            <TextView
+                android:id="@+id/eastchamparan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="East Champaran"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/eastchamparanactive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/eastchamparanrecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/eastchamparanactive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/eastchamparandeceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/eastchamparanrecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/eastchamparanconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/eastchamparandeceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+            <TextView
+                android:id="@+id/gaya"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gaya"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/gayaactive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/gayarecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/gayaactive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/gayadeceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/gayarecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/gayaconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/gayadeceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+            <TextView
+                android:id="@+id/goplaganj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gopalganj"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/goplaganjactive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/goplaganjrecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/goplaganjactive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/goplaganjdeceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/goplaganjrecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/goplaganjconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/goplaganjdeceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+            <TextView
+                android:id="@+id/jamui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jamui"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/jamuiactive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/jamuirecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/jamuiactive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/jamuideceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/jamuirecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/jamuiconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/jamuideceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+            <TextView
+                android:id="@+id/jehanabad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jehanabad"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/jehanabadactive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/jehanabadrecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/jehanabadactive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/jehanabaddeceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/jehanabadrecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/jehanabadconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/jehanabaddeceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+            <TextView
+                android:id="@+id/kaimur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kaimur"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/kaimuractive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/kaimurrecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/kaimuractive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/kaimurdeceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/kaimurrecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/kaimurconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/kaimurdeceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+            <TextView
+                android:id="@+id/katihar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Katihar"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/katiharactive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/katiharrecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/katiharactive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/katihardeceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/katiharrecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/katiharconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/katihardeceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+            <TextView
+                android:id="@+id/khagaria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Khagaria"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/khagariaactive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/khagariarecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/khagariaactive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/khagariadeceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/khagariarecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/khagariaconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/khagariadeceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+            <TextView
+                android:id="@+id/kishanganj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kishanganj"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/Kishanganjactive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/Kishanganjrecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/Kishanganjactive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/Kishanganjdeceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/Kishanganjrecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/Kishanganjconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/Kishanganjdeceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+            <TextView
+                android:id="@+id/lakhisarai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lakhisarai"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/lakhisaraiactive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/lakhisarairecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/lakhisaraiactive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/lakhisaraideceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/lakhisarairecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/lakhisaraiconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/lakhisaraideceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+            <TextView
+                android:id="@+id/madhepura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Madhepura"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/madhepuraactive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/madhepurarecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/madhepuraactive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/madhepuradeceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/madhepurarecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/madhepuraconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/madhepuradeceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+            <TextView
+                android:id="@+id/madhubani"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Madhubani"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/madhubaniactive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/madhubanirecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/madhubaniactive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/madhubanideceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/madhubanirecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/madhubaniconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/madhubanideceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+            <TextView
+                android:id="@+id/munger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Munger"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/mungeractive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/mungerrecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/mungeractive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/mungerdeceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/mungerrecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/mungerconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/mungerdeceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+            <TextView
+                android:id="@+id/muzaffarpur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Muzaffarpur"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/muzaffarpuractive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/muzaffarpurrecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/muzaffarpuractive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/muzaffarpurdeceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/muzaffarpurrecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/muzaffarpurconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/muzaffarpurdeceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+            <TextView
+                android:id="@+id/nalanda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nalanda"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/nalandaactive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/nalandarecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/nalandaactive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/nalandadeceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/nalandarecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/nalandaconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/nalandadeceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+            <TextView
+                android:id="@+id/nawada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nawada"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/nawadaactive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/nawadarecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/nawadaactive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/nawadadeceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/nawadarecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/nawadaconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/nawadadeceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+            <TextView
+                android:id="@+id/patna"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Patna"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/patnaactive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/patnarecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/patnaactive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/patnadeceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/patnarecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/patnaconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/patnadeceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+            <TextView
+                android:id="@+id/purnea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Purnea"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/purneaactive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/purnearecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/purneaactive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/purneadeceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/purnearecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/purneaconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/purneadeceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+            <TextView
+                android:id="@+id/rohtas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rohtas"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/rohtasactive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/rohtasrecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/rohtasactive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/rohtasdeceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/rohtasrecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/rohtasconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/rohtasdeceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+            <TextView
+                android:id="@+id/saharsa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saharsa"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/saharsaactive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/saharsarecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/saharsaactive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/saharsadeceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/saharsarecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/saharsaconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/saharsadeceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+            <TextView
+                android:id="@+id/samastipur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Samastipur"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/samastipuractive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/samastipurrecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/samastipuractive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/samastipurdeceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/samastipurrecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/samastipurconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/samastipurdeceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+            <TextView
+                android:id="@+id/saran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saran"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/saranactive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/saranrecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/saranactive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/sarandeceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/saranrecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/saranconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/sarandeceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+            <TextView
+                android:id="@+id/sheikhpura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sheikhpura"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/sheikhpuraactive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/sheikhpurarecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/sheikhpuraactive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/sheikhpuradeceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/sheikhpurarecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/sheikhpuraconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/sheikhpuradeceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+            <TextView
+                android:id="@+id/sheohar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sheohar"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/sheoharactive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/sheoharrecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/sheoharactive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/sheohardeceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/sheoharrecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/sheoharconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/sheohardeceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+            <TextView
+                android:id="@+id/sitamarhi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sitamarhi"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/sitamarhiactive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/sitamarhirecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/sitamarhiactive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/sitamarhideceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/sitamarhirecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/sitamarhiconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/sitamarhideceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+            <TextView
+                android:id="@+id/siwan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Siwan"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/siwanactive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/siwanrecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/siwanactive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/siwandeceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/siwanrecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/siwanconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/siwandeceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+            <TextView
+                android:id="@+id/supaul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Supaul"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/supaulactive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/supaulrecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/supaulactive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/supauldeceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/supaulrecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/supaulconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/supauldeceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+            <TextView
+                android:id="@+id/vaishali"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vaishali"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/vaishaliactive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/vaishalirecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/vaishaliactive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/vaishalideceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/vaishalirecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/vaishaliconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/vaishalideceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:backgroundTint="#9C9797"
+            >
+            <TextView
+                android:id="@+id/westchamparan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="West Champaran"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="10dp"
+            android:layout_marginBottom="50dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/westchamparanactive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:id="@+id/westchamparanrecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/westchamparanactive"
+                    android:textColor="#267111"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp" />
+                <TextView
+                    android:id="@+id/westchamparandeceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/westchamparanrecovered"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/westchamparanconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_toRightOf="@+id/westchamparandeceased"
+                    android:textColor="#FD0000"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+</ScrollView>
+</RelativeLayout>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HospitalHome"
+    android:orientation="vertical"
+
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarhHome"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#A1CAD5"
+
+        >
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/coronavirus"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="monospace"
+            android:text="COVID'19 HELPER"
+            android:textColor="#14678C"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:orientation="vertical"
+     >
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hospital Information"
+        android:textSize="30dp"
+        android:textColor="#0C6891"
+        android:layout_gravity="center"
+
+        />
+
+
+    <EditText
+        android:id="@+id/HospitalName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="#F8F6F6"
+        android:hint="Hospital Name"
+        android:maxLength="50"
+        android:textColor="#5E5B5B"
+        android:textColorHint="#676363"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/Address"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="#F8F6F6"
+        android:hint="Adddress"
+        android:maxLength="50"
+        android:textColor="#5E5B5B"
+        android:textColorHint="#676363"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/City"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="#F8F6F6"
+        android:hint="City"
+        android:maxLength="50"
+        android:textColor="#5E5B5B"
+        android:textColorHint="#676363"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textAllCaps="true"/>
+    <EditText
+        android:id="@+id/Beds"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="#F8F6F6"
+        android:hint="Beds Available"
+        android:maxLength="50"
+        android:textColor="#5E5B5B"
+        android:textColorHint="#676363"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        />
+    <EditText
+        android:id="@+id/Oxygen"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="#F8F6F6"
+        android:hint="Oxygen Available"
+        android:maxLength="50"
+        android:textColor="#5E5B5B"
+        android:textColorHint="#676363"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        />
+    <EditText
+        android:id="@+id/Docs"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="#F8F6F6"
+        android:hint="Doctors Available"
+        android:maxLength="50"
+        android:textColor="#5E5B5B"
+        android:textColorHint="#676363"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        />
+    <EditText
+        android:id="@+id/Nurses"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="#F8F6F6"
+        android:hint="Number of Nurses"
+        android:maxLength="50"
+        android:textColor="#5E5B5B"
+        android:textColorHint="#676363"
+        android:textSize="15sp"
+        android:textStyle="bold"
+       />
+    <EditText
+        android:id="@+id/Info"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="#F8F6F6"
+        android:hint="Contact Information"
+        android:maxLength="50"
+        android:textColor="#5E5B5B"
+        android:textColorHint="#676363"
+        android:textSize="15sp"
+        android:textStyle="bold"
+       />
+    <EditText
+        android:id="@+id/Ambulance"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="#F8F6F6"
+        android:hint="Ambulance Contact Number"
+        android:maxLength="50"
+        android:textColor="#5E5B5B"
+        android:textColorHint="#676363"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        />
+
+
+
+     <Button
+         android:id="@+id/Submit"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginLeft="20dp"
+         android:layout_marginTop="10dp"
+         android:layout_marginRight="20dp"
+         android:layout_marginBottom="20dp"
+         android:background="#A1CAD5"
+         android:clickable="true"
+         android:text="Submit"
+         android:textAllCaps="false"
+         android:textColor="#0F1D23" />
+
+
+
+
+ </LinearLayout>
+
+</ScrollView>
+</LinearLayout>

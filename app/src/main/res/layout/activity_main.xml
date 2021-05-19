@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="#A1CAD5">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="monospace"
+        android:text="COVID'19 HELPER"
+        android:textAlignment="center"
+        android:textColor="#14678C"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    >
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/mask"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/mask"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="left"
+        android:layout_marginLeft="20dp">
+
+    </ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@+id/mask"
+        android:fontFamily="@font/alfa_slab_one"
+        android:gravity="center"
+        android:text="MAKE THE RIGHT CHOICE. WEAR A MASK"
+        android:textColor="#14678C"
+        android:textSize="30dp"
+        android:textStyle="bold">
+
+    </TextView>
+</RelativeLayout>
+
+
+    <Button
+        android:id="@+id/patient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#FFFFFF"
+        android:clickable="true"
+        android:text="Let's Go LogIn"
+        android:textAllCaps="false"
+        android:textColor="#676363"
+        android:textSize="30dp" />
+
+
+
+
+    <ProgressBar
+        android:id="@+id/idProgressBar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        />
+
+</LinearLayout>
+
+</LinearLayout>

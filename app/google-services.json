@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "78212381306",
+    "project_id": "covid-19-helper-3f001",
+    "storage_bucket": "covid-19-helper-3f001.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:78212381306:android:e0dc669cdd1de10a4d19c3",
+        "android_client_info": {
+          "package_name": "com.hospital.hospitalfinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "78212381306-c46s5q91fo9jrtu9sp5j02glnqi4milf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hospital.hospitalfinder",
+            "certificate_hash": "3f4979e901d2f9d233801c0848116d6322346789"
+          }
+        },
+        {
+          "client_id": "78212381306-kn0joikmgtfu0rf0aos11s2hv154se84.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABPLeUuT28kgo67HBX2ZVa6CJjOy77e10"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "78212381306-kn0joikmgtfu0rf0aos11s2hv154se84.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

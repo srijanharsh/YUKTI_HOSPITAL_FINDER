@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:id="@+id/home"
+        android:title="Hospitals"
+        android:icon="@drawable/home"/>
+    <item android:id="@+id/news"
+        android:title="Covid Updates"
+        android:icon="@drawable/news"/>
+
+
+    <item android:id="@+id/ambu"
+        android:title="Ambulance"
+        android:icon="@drawable/ambu"/>
+
+    <item android:id="@+id/about"
+        android:title="About"
+        android:icon="@drawable/about"/>
+
+</menu>

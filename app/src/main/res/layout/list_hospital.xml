@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:layout_marginTop="5dp"
+   app:cardCornerRadius="10dp"
+    android:elevation="4dp"
+   app:cardUseCompatPadding="true"
+    android:backgroundTint="#ffffff"
+
+    >
+
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:padding="16dp"
+     android:orientation="vertical">
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+  <TextView
+      android:id="@+id/hname"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="#454343"
+      android:text="Hospital Name : "
+      android:textSize="10sp"
+      android:fontFamily="monospace"
+      />
+  <TextView
+      android:id="@+id/hosname"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textColor="#000000"
+      android:layout_toRightOf="@+id/hname"
+      android:text="Hospital Name"
+      android:textSize="15sp"
+      android:textStyle="bold"
+      android:fontFamily="monospace"
+     />
+</RelativeLayout>
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+  <TextView
+      android:id="@+id/addp"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="#454343"
+      android:text="Address: "
+      android:textSize="10sp"
+      android:fontFamily="monospace"
+      />
+   <TextView
+       android:id="@+id/add"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:textColor="#000000"
+       android:layout_toRightOf="@+id/addp"
+       android:text="Address"
+       android:textSize="15sp"
+       android:textStyle="bold"
+       android:fontFamily="monospace"
+       />
+</RelativeLayout>
+
+  <RelativeLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+   <TextView
+       android:id="@+id/cityp"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textColor="#454343"
+       android:text="City: "
+       android:textSize="10sp"
+       android:fontFamily="monospace"
+       />
+   <TextView
+       android:id="@+id/city"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:textColor="#000000"
+       android:layout_toRightOf="@+id/cityp"
+       android:text="City"
+       android:textSize="15sp"
+       android:textStyle="bold"
+       android:fontFamily="monospace"
+       android:textAllCaps="true"
+       />
+  </RelativeLayout>
+
+  <RelativeLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+
+   <TextView
+       android:id="@+id/oxyp"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textColor="#454343"
+       android:text="Oxygen Cylinder : "
+       android:textSize="10sp"
+       android:fontFamily="monospace"
+       />
+  <TextView
+      android:id="@+id/oxy"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textColor="#000000"
+      android:layout_toRightOf="@+id/oxyp"
+      android:text="Oxygen"
+      android:textSize="15sp"
+      android:fontFamily="monospace"
+      android:textStyle="bold"
+      />
+  </RelativeLayout>
+
+  <RelativeLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+   <TextView
+       android:id="@+id/bedp"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textColor="#454343"
+       android:textSize="10sp"
+       android:text="No. of beds available: "
+       android:fontFamily="monospace"
+       />
+
+   <TextView
+      android:id="@+id/bed"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textColor="#000000"
+       android:layout_toRightOf="@+id/bedp"
+      android:textSize="15sp"
+      android:text="Beds"
+       android:fontFamily="monospace"
+       android:textStyle="bold"
+      />
+  </RelativeLayout>
+  <RelativeLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+
+   <TextView
+       android:id="@+id/docsp"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textColor="#454343"
+       android:textSize="10sp"
+       android:text="No. of Doctors available: "
+       android:fontFamily="monospace"
+       />
+  <TextView
+      android:id="@+id/docs"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textColor="#000000"
+      android:layout_toRightOf="@+id/docsp"
+      android:textSize="15sp"
+      android:text="Doctors"
+      android:fontFamily="monospace"
+      android:textStyle="bold"
+      />
+  </RelativeLayout>
+
+  <RelativeLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+
+   <TextView
+       android:id="@+id/nursp"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textColor="#454343"
+       android:textSize="10sp"
+       android:text="No. of Nurses available: "
+       android:fontFamily="monospace"
+       />
+   <TextView
+      android:id="@+id/nurs"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textColor="#000000"
+       android:layout_toRightOf="@+id/nursp"
+      android:textSize="15sp"
+      android:text="Nurses"
+       android:fontFamily="monospace"
+       android:textStyle="bold"
+      />
+
+  </RelativeLayout>
+
+  <RelativeLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+   <TextView
+       android:id="@+id/infop"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textColor="#454343"
+       android:textSize="10sp"
+       android:text="Contact Information:"
+       android:fontFamily="monospace"
+       />
+  <TextView
+      android:id="@+id/info"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textColor="#000000"
+      android:layout_toRightOf="@+id/infop"
+      android:textSize="15sp"
+      android:text="Information"
+      android:fontFamily="monospace"
+      android:textStyle="bold"
+      />
+
+  </RelativeLayout>
+
+  <RelativeLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+   <TextView
+       android:id="@+id/ambup"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textColor="#454343"
+       android:textSize="10sp"
+       android:text="Ambulance Number:"
+       android:fontFamily="monospace"
+       />
+  <TextView
+      android:id="@+id/ambu"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textColor="#000000"
+      android:layout_toRightOf="@+id/ambup"
+      android:textSize="15dp"
+      android:text="Ambulance Number"
+      android:textStyle="bold"
+      android:fontFamily="monospace"
+      />
+  </RelativeLayout>
+
+ </LinearLayout>
+
+</androidx.cardview.widget.CardView>

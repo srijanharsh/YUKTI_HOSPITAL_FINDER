@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HospitalHome2"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarhHome"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#A1CAD5"
+
+        >
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/coronavirus"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="monospace"
+            android:text="COVID'19 HELPER"
+            android:textColor="#14678C"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+
+
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Patient  Information"
+                android:textSize="30dp"
+                android:textColor="#0C6891"
+                android:layout_gravity="center"
+
+                />
+
+
+            <ProgressBar
+                android:id="@+id/idProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                />
+            <TextView
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:textColor="#151515"
+                android:textSize="10sp"
+                android:fontFamily="monospace"
+                />
+            <Button
+                android:id="@+id/update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="#A1CAD5"
+                android:clickable="true"
+                android:text="Update"
+                android:textAllCaps="false"
+                android:textColor="#0F1D23"
+                android:layout_marginBottom="20dp"
+                />
+            <Button
+                android:id="@+id/GotoHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="#A1CAD5"
+                android:clickable="true"
+                android:text="Goto Home Page"
+                android:textAllCaps="false"
+                android:textColor="#0F1D23"
+                android:layout_marginBottom="20dp"
+                />
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>
